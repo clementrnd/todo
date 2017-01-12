@@ -1,0 +1,41 @@
+<div id="main">
+
+<header>
+  <%= image_tag "list.png", class: "image" %>
+  <h1 id="titre">Later Lists</h1>
+</header>
+<div class="list">
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Deadline</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lists.each do |list| %>
+      <tr>
+        <td><%= list.title %></td>
+        <td><%= list.description %></td>
+        <td class="last"><%= list.deadline %></td>
+        <td><%= link_to 'Show', list %></td>
+        <td><%= link_to 'Edit', edit_list_path(list) %></td>
+        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div class="link">
+<%= link_to   'New list', new_list_path %>
+<%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+</div>
+
+</div>
+</div>
