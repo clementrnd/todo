@@ -1,3 +1,8 @@
+*{
+  font-family: hind;
+  font-weight: normal;
+}
+
 /*accueil*/
 
 th{
@@ -201,4 +206,19 @@ body {
   font-size: 25px;
   border-radius: 5px;
   color: #DB5F54;
+}
+
+#signup a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#signup a:hover {
+  text-decoration: underline;
+}
+
+#notice {
+  color: #DB5F54;
+  font-size: 15px;
+  font-style: italic;
 }
